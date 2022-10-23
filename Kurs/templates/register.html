@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Kus Part 1</title>
+        <link rel=stylesheet href="/static/styles/register.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="/"><img src="/static/images/Logo.png"></a>
+            <div class="center">REGISTER</div>
+            <div class="registerContainer">
+                <form action="/register">
+                    <button type="submit"><div class="content">Register</div></button>
+                </form>
+            </div>
+            <div class="loginContainer">
+                <form action="/login">
+                    <button type="submit"><div class="content">Login</div></button>
+                </form>
+            </div>
+        </div>
+        <div class="home">
+            <div class="left">
+                
+            </div>
+            <div class="center">
+                <div class="registerContainer">
+                    <form action="/registerUser" method="post">
+                        <input type="text" name="username" placeholder="enter username">
+                        <input type="password" name="password" placeholder="enter password">
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+    </body>
+</html>

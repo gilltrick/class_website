@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Kus Part 1</title>
+        <link rel=stylesheet href="/static/styles/home.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="/"><img src="/static/images/Logo.png"></a>
+            <div class="center">Home</div>
+            <div class="registerContainer">
+                <form action="#">
+                    <button type="submit"><div class="content">Menu</div></button>
+                </form>
+            </div>
+            <div class="loginContainer">
+                <form action="/logout">
+                    <button type="submit"><div class="content">Logout</div></button>
+                </form>
+            </div>
+        </div>
+        <div class="home">
+            <div class="left">
+                
+            </div>
+            <div class="center">
+                <div class="inputContainer">
+                    <form action="/newNode" method="post">
+                        <input type="text" name="title" placeholder="enter title">
+                        <textarea name="text" placeholder="enter your node"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="nodeList">
+                    {% for node in user.nodeList %}
+                    <div class="nodeContainer">
+                        <div class="nodeTitle">{{node.title}}</div>
+                        <div class="nodeText">{{node.text}}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/js.js"></script>
+</html>
